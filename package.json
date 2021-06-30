@@ -1,28 +1,18 @@
 {
-  "name": "portfolio-app",
+  "name": "express_starter",
   "version": "1.0.0",
-  "description": "This is a portfolio-app for jig.jp intern in this summer.",
-  "main": "index.js",
+  "description": "This is Express Starter",
+  "main": "index.mjs",
   "scripts": {
     "npm:check": "ncu",
     "npm:update": "ncu -u",
     "test": "env-cmd -f ./config/test.env jest --watch --runInBand",
-    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js",
-    "start": "node src/index.js"
+    "dev": "env-cmd -f ./config/dev.env nodemon --experimental-modules src/index.mjs",
+    "start": "node --experimental-modules src/index.mjs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rough-github/jig.jp_portfolio.git"
-  },
+  "type": "module",
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rough-github/jig.jp_portfolio/issues"
-  },
-  "homepage": "https://github.com/rough-github/jig.jp_portfolio#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
   "devDependencies": {
     "color": "^3.1.3",
     "concurrently": "^6.2.0",
